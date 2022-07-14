@@ -29,12 +29,27 @@ export const CategoriesProvider = ({ children }) => {
 
   const [categoriesMap, setCategoriesMap] = useState({});
 
-  console.log("loading: ", loading);
+  useEffect( () => {
+    if(data) {
+      //destructuing the collections off the data:
+      const { collections } = data;
+      const collectionsMap = collections.reduce( (accumulator, collection) => {
+        const { title, items } = collection;
+        accumulator[title.toLowerCase()] = items;
+        return accumulator;
+      }, {});
+
+      setCategoriesMap(collectionsMap);
+    }
+
+  }, [data]);
+
+  console.log("loading from graphQL: ", loading);
   console.log("data from graphQL:", data);
 
   
 
-  const value = { categoriesMap };
+  const value = { categoriesMap, loading };
   return (
     <CategoriesContext.Provider value={value}>
       {children}
