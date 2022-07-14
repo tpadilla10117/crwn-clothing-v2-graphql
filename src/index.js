@@ -11,7 +11,7 @@ import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client'; //
 import './index.scss';
 
 //Client points to our GraphQL playground
-//caches the values made from requests
+//caches the values made from requests to the localbrowser
 const client = new ApolloClient({
   uri: 'https://crwn-clothing.com/',
   cache: new InMemoryCache()
