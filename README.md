@@ -2,6 +2,17 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Libraries:
+
+### `npm i @apollo/client`
+- A frontend client that allows us to make requests for GraphQL and receive responses.
+- comes with bindings for React (to get GraphQL data and make requests within React components)
+
+### `npm i graphql`
+- GraphQL sits between database and the frontend server -> allows you to format requests and receive spefic data based on the shape you send
+
+
+
 ## Available Scripts
 
 In the project directory, you can run:
