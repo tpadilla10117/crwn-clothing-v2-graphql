@@ -1,6 +1,6 @@
 import { useState, useEffect, Fragment } from 'react';
 import { useParams } from 'react-router-dom';
-import { gql, useQuery, useMutation } from '@apollo/client';
+import { gql, useQuery, /* useMutation */ } from '@apollo/client';
 
 import ProductCard from '../../components/product-card/product-card.component';
 
